@@ -11,6 +11,3 @@ class AccountsConfig(AppConfig):
         tech_group, created = Group.objects.get_or_create(name='Techspec')
         manager_group, created = Group.objects.get_or_create(name='Manager')
         customer_group, created = Group.objects.get_or_create(name='Customer')
-
-        # manager_permission_view1 = Permission.objects.get(codename='view_robot')
-        # manager_group.permissions.add(manager_permission_view1)
