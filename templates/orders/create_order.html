@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Order</title>
+    </head>
+    <body>
+        <h1>Create Order</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create Order">
+        </form>
+        <a href="{% url 'main' %}">Main page</a>
+    </body>
+</html>

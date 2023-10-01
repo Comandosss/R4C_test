@@ -1,0 +1,21 @@
+<body>
+<head>
+    <h1>Factory Robots</h1>
+    {% if user.is_authenticated %}
+        Hello, {{ user.username }}!
+        <p>
+            You can order a new robot now!
+            <p><a href="{% url 'create_order' %}">Create order</a></p>
+        </p>
+        <p><a href="{% url 'orders_list' %}">Orders list</a></p>
+        <p><a href="{% url 'customers_list' %}">Customers list</a></p>
+        <p><a href="{% url 'add_robot' %}">Add robot</a></p>
+        <p><a href="{% url 'robots_list' %}">Robots list</a></p>
+        <p><a href="{% url 'logout' %}">Log out</a></p>
+    {% else %}
+        <p>You are not logging in</p>
+        <p><a href="{% url 'login' %}">Log In</a></p>
+        <p><a href="{% url 'signup' %}">Sign up</a></p>
+    {% endif %}
+</body>
+</html>

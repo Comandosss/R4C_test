@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robots list</title>
+</head>
+<body>
+    <h1>Robots list</h1>
+    <ol>
+        {% for robot in robots %}
+            <li>Model: {{ robot.model }},
+            Version: {{ robot.version }},
+            DateTime: {{ robot.created }}</li>
+        {% endfor %}
+    </ol>
+    <p><a href="{% url 'main' %}">Main page</a></p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customers list</title>
+</head>
+<body>
+    <h1>Customers list</h1>
+        {% for customer in customers %}
+            <h2>{{ customer.email }}</h2>
+        {% endfor %}
+        <p><a href="{% url 'main' %}">Main page</a></p>
+</body>
+</html>
